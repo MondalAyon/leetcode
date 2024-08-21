@@ -1,19 +1,13 @@
 public class convertToTitle {
 
     public static void main (String[] args) {
-        int inputcolumnNumber = 1;
-        //int inputcolumnNumber = 77;
+        int inputcolumnNumber = 2147483647;
         String columnTitle = "";
 
         int columnNumber = inputcolumnNumber;
         int offset = 64;
         int q = -1;
         int r = -1;
-
-        //System.out.println((int)c);
-        //System.out.println((char)65);
-
-        //System.out.println(52/26);
 
         if (columnNumber >= 1 && columnNumber <= 26) {
             columnTitle = String.valueOf((char)(columnNumber + offset));
@@ -29,7 +23,7 @@ public class convertToTitle {
                 if (r == 0) {
                     q--;
                     r=26;
-                    System.out.println("Changed q=" + q + " r=" + r);
+                    //System.out.println("Changed q=" + q + " r=" + r);
                 }
 
                 if (q <= 26) {
