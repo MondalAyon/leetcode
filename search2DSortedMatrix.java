@@ -21,9 +21,12 @@ public class search2DSortedMatrix {
         //int[] array = {1,3,5,7,8,9,10};  // for testing the 1-D binary search.
         //System.out.println(searchSortedArray(array, 6));
 
-        print2dArray(array);
+        //print2dArray(array);
+        //System.out.println(searchMatrixV2(array, 35));
 
-        System.out.println(searchMatrixV2(array, 35));
+
+        /* Using test cases */
+        runTestCases();
     }
 
 
@@ -59,7 +62,7 @@ public class search2DSortedMatrix {
         for (int i=0; i<r; i++) {
 
             if (target >= matrix[i][0] && target <= matrix[i][c-1]) {
-                System.out.println("Item may be at array[" + i + "][c]");
+                //System.out.println("Item may be at array[" + i + "][c]");
                 found = searchSortedArray(matrix[i], target);
                 return found;
             }
@@ -78,6 +81,36 @@ public class search2DSortedMatrix {
             }
             System.out.println();
         }
+    }
+
+    public static void check(int testCaseNo, boolean expected, boolean testOutput) {
+        String outcome = "";
+
+        if (expected == testOutput)
+            outcome = "Passed";
+        else outcome = "Failed";
+
+        System.out.println("TestCase " + testCaseNo + " : " + outcome);
+    }
+
+    public static void testCase1 () {
+        int[][] inputMatrix = {{1,3,5,7},{10,11,16,20},{23,30,34,60}};
+        int inputTarget = 34;
+        boolean expectedOutput = true;
+
+        check(1, expectedOutput, searchMatrixV2(inputMatrix, inputTarget));
+    }
+
+    public static void testCase2 () {
+        int [][] inputMatrix = {{1},{3}};
+        int inputTarget = 3;
+        boolean expectedOutput = true;
+
+        check(2, expectedOutput, searchMatrixV2(inputMatrix, inputTarget));
+    }
+    public static void runTestCases() {
+        testCase1();
+        testCase2();
     }
 }
 
