@@ -1,6 +1,8 @@
 /*
 https://leetcode.com/problems/average-of-levels-in-binary-tree/submissions/1434751950/
 https://leetcode.com/problems/average-of-levels-in-binary-tree/description/
+https://leetcode.com/problems/average-of-levels-in-binary-tree/solutions/5972734/using-queue/
+
 Given the root of a binary tree, return the average value of the nodes on each level in the form of an array. Answers within 10-5 of the actual answer will be accepted.
 
 Example 1:
